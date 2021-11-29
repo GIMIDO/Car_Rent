@@ -7,6 +7,7 @@ from car_dealer_portal.models import *
 from customer_portal.models import *
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+from django.core.files import File
 # Create your views here.
 
 def index(request):
@@ -140,8 +141,18 @@ def history(request):
     car_dealer = CarDealer.objects.get(car_dealer = user)
     orders = Orders.objects.filter(car_dealer = car_dealer)
     order_list = []
+
     for o in orders:
         order_list.append(o)
+    
+    f = open("out.txt", "a")
+    f.write("--------------\n")
+    f.write("--- DEALER ---\nName: " + str(user.username) + "\nEarnings: $" + str(car_dealer.wallet) + "\n---- CARS ----")
+    for order in order_list:
+        f.write("\nVehicle: " + str(order.vehicle.car_name) + "\n Rent: $" + str(order.rent) + "\n Days: " + str(order.days) + "\n Capacity: " + str(order.vehicle.capacity) + "\n")
+    f.write("")
+    f.close()
+
     return render(request, 'car_dealer/history.html', {'wallet':car_dealer.wallet, 'order_list':order_list})
 
 @login_required

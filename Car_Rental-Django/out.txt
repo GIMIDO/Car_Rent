@@ -1,0 +1,9 @@
+--------------
+--- DEALER ---
+Name: dealer1
+Earnings: $260
+---- CARS ----
+Vehicle: Good car
+ Rent: $260
+ Days: 5
+ Capacity: 4
