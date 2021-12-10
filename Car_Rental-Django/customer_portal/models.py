@@ -3,7 +3,6 @@ from django.db import models
 from django.core.validators import *
 from django.contrib.auth.models import User
 from car_dealer_portal.models import *
-# Create your models here.
 
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

@@ -1,9 +1,21 @@
 --------------
 --- DEALER ---
-Name: dealer1
-Earnings: $260
+Name: AntRat2
+Earnings: $884
 ---- CARS ----
-Vehicle: Good car
+Vehicle: Best Car
  Rent: $260
  Days: 5
  Capacity: 4
+
+Vehicle: Toyote Cumchi
+ Rent: $260
+ Days: 10
+ Capacity: 2
+
+Vehicle: BMW X5
+ Rent: $364
+ Days: 7
+ Capacity: 4
+
+ 
