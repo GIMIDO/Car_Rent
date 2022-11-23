@@ -12,7 +12,6 @@
 
 ## Run Project
 
-
 Install Python
 
 Create Virtual Environment
@@ -27,7 +26,7 @@ Install Packages
 pip install -r requirements.txt
 ```
 
-Requires **MySQL database**, so create a database named _ocrsdjango_.
+Requires **MySQL database**, so create a database named `ocrsdjango`.
 
 Then, make database migrations:
 ```
@@ -40,6 +39,14 @@ And finally, after a successful migration run the application:
 python manage.py runserver
 ```
 
-Go to URL “http://127.0.0.1/[ PORT_NUMBER ]/“
+Go to URL `http://127.0.0.1:PORT_NUMBER/`
+
+## How to switch to Django admin panel
 
 For the Admin Panel credentials, you have to create one with a superuser.
+
+```
+python manage.py createsuperuser
+```
+
+Go to `/admin` and enter superuser credentials
